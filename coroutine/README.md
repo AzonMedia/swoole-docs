@@ -3,6 +3,8 @@
 ## Subsections
 - [Coroutine\Channel](./channel/README.md)
 - [Coroutine\Mysql](./mysql/README.md)
+- [Coroutine\Server](./server/README.md)
+- [Coroutine\Socket](./server/README.md)
 
 ## Documentation
 
@@ -88,7 +90,7 @@ public static function getuid();
  * If there is no parent coroutine ID reurns -1
  * @return int
  */
-public static function getPcid() : int;
+public static function getPcid(int $cid) : int;
 
 /**
  * Delays the execution of the current coroutine with the given amount in $seconds.
