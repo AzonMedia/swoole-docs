@@ -1,12 +1,37 @@
-# Unofficial Swoole Documentation
+# ./classes
 
-This project contains unofficial swoole documentation. This documentation is partial and supplements the existing [official swoole documentation](https://www.swoole.co.uk/docs/).
-It consists of documentation pulled from various sources, reverse engineering, examples, experience from real life applicaltions.
+## Namespaces
+* [Swoole/Atomic](Swoole/Atomic)
+* [Swoole/Connection](Swoole/Connection)
+* [Swoole/Coroutine](Swoole/Coroutine)
+* [Swoole/Http](Swoole/Http)
+* [Swoole/Memory](Swoole/Memory)
+* [Swoole/MySQL](Swoole/MySQL)
+* [Swoole/Process](Swoole/Process)
+* [Swoole/Redis](Swoole/Redis)
+* [Swoole/Server](Swoole/Server)
+* [Swoole/Table](Swoole/Table)
+* [Swoole/WebSocket](Swoole/WebSocket)
 
-## Documentation
-- [Swoole Server](./server/README.md)
-- [Coroutine](./coroutine/README.md)
-- [Coroutine\Mysql](./coroutine/mysql/README.md)
-- [Mysql (async)](./async/mysql/README.md)
-- [Coroutine\Channel](./coroutine/channel/README.md)
-- [Runtime](./runtime/README.md)
+## Classes
+* [Swoole\Async](Swoole/Async.md)
+* [Swoole\Atomic](Swoole/Atomic.md)
+* [Swoole\Buffer](Swoole/Buffer.md)
+* [Swoole\Channel](Swoole/Channel.md)
+* [Swoole\Client](Swoole/Client.md)
+* [Swoole\Coroutine](Swoole/Coroutine.md)
+* [Swoole\Event](Swoole/Event.md)
+* [Swoole\Exception](Swoole/Exception.md)
+* [Swoole\ExitException](Swoole/ExitException.md)
+* [Swoole\Lock](Swoole/Lock.md)
+* [Swoole\Mmap](Swoole/Mmap.md)
+* [Swoole\MsgQueue](Swoole/MsgQueue.md)
+* [Swoole\MySQL](Swoole/MySQL.md)
+* [Swoole\Process](Swoole/Process.md)
+* [Swoole\Redis](Swoole/Redis.md)
+* [Swoole\RingQueue](Swoole/RingQueue.md)
+* [Swoole\Runtime](Swoole/Runtime.md)
+* [Swoole\Serialize](Swoole/Serialize.md)
+* [Swoole\Server](Swoole/Server.md)
+* [Swoole\Table](Swoole/Table.md)
+* [Swoole\Timer](Swoole/Timer.md)
