@@ -6,7 +6,9 @@
 
 ```php
 <?php
+
 namespace Swoole\Process;
+
 /**
  * Class Pool
  * @package Swoole\Process

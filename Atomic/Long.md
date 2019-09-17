@@ -6,7 +6,9 @@
 
 ```php
 <?php
+
 namespace Swoole\Atomic;
+
 /**
  * Class Long
  * @package Swoole\Atomic

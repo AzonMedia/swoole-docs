@@ -6,7 +6,9 @@
 
 ```php
 <?php
+
 namespace Swoole\Http;
+
 /**
  * Class Server
  * @package Swoole\Http

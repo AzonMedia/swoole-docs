@@ -6,7 +6,9 @@
 
 ```php
 <?php
+
 namespace Swoole\Connection;
+
 /**
  * Class Iterator
  * @package Swoole\Connection

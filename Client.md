@@ -6,7 +6,9 @@
 
 ```php
 <?php
+
 namespace Swoole;
+
 /**
  * Class Client
  * @package Swoole

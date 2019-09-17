@@ -6,7 +6,9 @@
 
 ```php
 <?php
+
 namespace Swoole;
+
 /**
  * Class Redis
  * @package Swoole

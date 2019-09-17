@@ -6,7 +6,9 @@
 
 ```php
 <?php
+
 namespace Swoole\Coroutine;
+
 /**
  * Class Socket
  * @package Swoole\Coroutine

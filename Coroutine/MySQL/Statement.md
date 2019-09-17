@@ -6,7 +6,9 @@
 
 ```php
 <?php
+
 namespace Swoole\Coroutine\MySQL;
+
 /**
  * Class Statement
  * @package Swoole\Coroutine\MySQL

@@ -6,7 +6,9 @@
 
 ```php
 <?php
+
 namespace Swoole\WebSocket;
+
 /**
  * Class CloseFrame
  * @package Swoole\WebSocket

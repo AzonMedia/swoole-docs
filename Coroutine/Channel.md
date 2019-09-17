@@ -6,7 +6,9 @@
 
 ```php
 <?php
+
 namespace Swoole\Coroutine;
+
 /**
  * Class Channel
  * @package Swoole\Coroutine

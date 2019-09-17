@@ -6,7 +6,9 @@
 
 ```php
 <?php
+
 namespace Swoole\Table;
+
 /**
  * Class Row
  * @package Swoole\Table

@@ -6,7 +6,9 @@
 
 ```php
 <?php
+
 namespace Swoole\Server;
+
 /**
  * Class Port
  * @package Swoole\Server

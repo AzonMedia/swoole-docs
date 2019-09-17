@@ -6,7 +6,9 @@
 
 ```php
 <?php
+
 namespace Swoole\WebSocket;
+
 /**
  * Class Server
  * @package Swoole\WebSocket

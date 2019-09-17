@@ -6,7 +6,9 @@
 
 ```php
 <?php
+
 namespace Swoole\Memory;
+
 /**
  * Class Pool
  * @package Swoole\Memory
