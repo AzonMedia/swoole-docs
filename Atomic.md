@@ -16,19 +16,19 @@ class Atomic
     
     
     /**
-     * @param type value
+     * @param type $value
      * @return void
      */
     public function __construct( $value) { }
     
     /**
-     * @param type add_value
+     * @param type $add_value
      * @return void
      */
     public function add( $add_value) { }
     
     /**
-     * @param type sub_value
+     * @param type $sub_value
      * @return void
      */
     public function sub( $sub_value) { }
@@ -40,26 +40,26 @@ class Atomic
     public function get( ) { }
     
     /**
-     * @param type value
+     * @param type $value
      * @return void
      */
     public function set( $value) { }
     
     /**
-     * @param type timeout
+     * @param type $timeout
      * @return void
      */
     public function wait( $timeout) { }
     
     /**
-     * @param type count
+     * @param type $count
      * @return void
      */
     public function wakeup( $count) { }
     
     /**
-     * @param type cmp_value
-     * @param type new_value
+     * @param type $cmp_value
+     * @param type $new_value
      * @return void
      */
     public function cmpset( $cmp_value, $new_value) { }

@@ -73,14 +73,14 @@ class MySQL
     public function __destruct( ) { }
     
     /**
-     * @param array server_config
+     * @param array $server_config
      * @return void
      */
     public function connect( array $server_config) { }
     
     /**
-     * @param type sql
-     * @param type timeout
+     * @param type $sql
+     * @param type $timeout
      * @return void
      */
     public function query( $sql, $timeout) { }
@@ -98,32 +98,32 @@ class MySQL
     public function nextResult( ) { }
     
     /**
-     * @param type timeout
+     * @param type $timeout
      * @return void
      */
     public function begin( $timeout) { }
     
     /**
-     * @param type timeout
+     * @param type $timeout
      * @return void
      */
     public function commit( $timeout) { }
     
     /**
-     * @param type timeout
+     * @param type $timeout
      * @return void
      */
     public function rollback( $timeout) { }
     
     /**
-     * @param type query
-     * @param type timeout
+     * @param type $query
+     * @param type $timeout
      * @return void
      */
     public function prepare( $query, $timeout) { }
     
     /**
-     * @param type defer
+     * @param type $defer
      * @return void
      */
     public function setDefer( $defer) { }

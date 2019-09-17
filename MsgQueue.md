@@ -16,7 +16,7 @@ class MsgQueue
     
     
     /**
-     * @param type len
+     * @param type $len
      * @return void
      */
     public function __construct( $len) { }
@@ -28,20 +28,20 @@ class MsgQueue
     public function __destruct( ) { }
     
     /**
-     * @param type data
-     * @param type type
+     * @param type $data
+     * @param type $type
      * @return void
      */
     public function push( $data, $type) { }
     
     /**
-     * @param type type
+     * @param type $type
      * @return void
      */
     public function pop( $type) { }
     
     /**
-     * @param type blocking
+     * @param type $blocking
      * @return void
      */
     public function setBlocking( $blocking) { }

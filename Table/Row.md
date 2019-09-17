@@ -26,26 +26,26 @@ class Row implements \ArrayAccess
     
     
     /**
-     * @param type offset
+     * @param type $offset
      * @return void
      */
     public function offsetExists( $offset) { }
     
     /**
-     * @param type offset
+     * @param type $offset
      * @return void
      */
     public function offsetGet( $offset) { }
     
     /**
-     * @param type offset
-     * @param type value
+     * @param type $offset
+     * @param type $value
      * @return void
      */
     public function offsetSet( $offset, $value) { }
     
     /**
-     * @param type offset
+     * @param type $offset
      * @return void
      */
     public function offsetUnset( $offset) { }

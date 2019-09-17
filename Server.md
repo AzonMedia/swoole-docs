@@ -131,10 +131,10 @@ class Server
     
     
     /**
-     * @param type host
-     * @param type port
-     * @param type mode
-     * @param type sock_type
+     * @param type $host
+     * @param type $port
+     * @param type $mode
+     * @param type $sock_type
      * @return void
      */
     public function __construct( $host, $port, $mode, $sock_type) { }
@@ -146,30 +146,30 @@ class Server
     public function __destruct( ) { }
     
     /**
-     * @param type host
-     * @param type port
-     * @param type sock_type
+     * @param type $host
+     * @param type $port
+     * @param type $sock_type
      * @return void
      */
     public function listen( $host, $port, $sock_type) { }
     
     /**
-     * @param type host
-     * @param type port
-     * @param type sock_type
+     * @param type $host
+     * @param type $port
+     * @param type $sock_type
      * @return void
      */
     public function addlistener( $host, $port, $sock_type) { }
     
     /**
-     * @param type event_name
-     * @param type callback
+     * @param type $event_name
+     * @param type $callback
      * @return void
      */
     public function on( $event_name, $callback) { }
     
     /**
-     * @param array settings
+     * @param array $settings
      * @return void
      */
     public function set( array $settings) { }
@@ -181,114 +181,114 @@ class Server
     public function start( ) { }
     
     /**
-     * @param type fd
-     * @param type send_data
-     * @param type server_socket
+     * @param type $fd
+     * @param type $send_data
+     * @param type $server_socket
      * @return void
      */
     public function send( $fd, $send_data, $server_socket) { }
     
     /**
-     * @param type ip
-     * @param type port
-     * @param type send_data
-     * @param type server_socket
+     * @param type $ip
+     * @param type $port
+     * @param type $send_data
+     * @param type $server_socket
      * @return void
      */
     public function sendto( $ip, $port, $send_data, $server_socket) { }
     
     /**
-     * @param type conn_fd
-     * @param type send_data
+     * @param type $conn_fd
+     * @param type $send_data
      * @return void
      */
     public function sendwait( $conn_fd, $send_data) { }
     
     /**
-     * @param type fd
+     * @param type $fd
      * @return void
      */
     public function exists( $fd) { }
     
     /**
-     * @param type fd
+     * @param type $fd
      * @return void
      */
     public function exist( $fd) { }
     
     /**
-     * @param type fd
-     * @param type is_protected
+     * @param type $fd
+     * @param type $is_protected
      * @return void
      */
     public function protect( $fd, $is_protected) { }
     
     /**
-     * @param type conn_fd
-     * @param type filename
-     * @param type offset
-     * @param type length
+     * @param type $conn_fd
+     * @param type $filename
+     * @param type $offset
+     * @param type $length
      * @return void
      */
     public function sendfile( $conn_fd, $filename, $offset, $length) { }
     
     /**
-     * @param type fd
-     * @param type reset
+     * @param type $fd
+     * @param type $reset
      * @return void
      */
     public function close( $fd, $reset) { }
     
     /**
-     * @param type fd
+     * @param type $fd
      * @return void
      */
     public function confirm( $fd) { }
     
     /**
-     * @param type fd
+     * @param type $fd
      * @return void
      */
     public function pause( $fd) { }
     
     /**
-     * @param type fd
+     * @param type $fd
      * @return void
      */
     public function resume( $fd) { }
     
     /**
-     * @param type data
-     * @param type worker_id
-     * @param type finish_callback
+     * @param type $data
+     * @param type $worker_id
+     * @param type $finish_callback
      * @return void
      */
     public function task( $data, $worker_id, $finish_callback) { }
     
     /**
-     * @param type data
-     * @param type timeout
-     * @param type worker_id
+     * @param type $data
+     * @param type $timeout
+     * @param type $worker_id
      * @return void
      */
     public function taskwait( $data, $timeout, $worker_id) { }
     
     /**
-     * @param array tasks
-     * @param type timeout
+     * @param array $tasks
+     * @param type $timeout
      * @return void
      */
     public function taskWaitMulti( array $tasks, $timeout) { }
     
     /**
-     * @param array tasks
-     * @param type timeout
+     * @param array $tasks
+     * @param type $timeout
      * @return void
      */
     public function taskCo( array $tasks, $timeout) { }
     
     /**
-     * @param type data
+     * @param type $data
      * @return void
      */
     public function finish( $data) { }
@@ -306,7 +306,7 @@ class Server
     public function shutdown( ) { }
     
     /**
-     * @param type worker_id
+     * @param type $worker_id
      * @return void
      */
     public function stop( $worker_id) { }
@@ -318,75 +318,75 @@ class Server
     public function getLastError( ) { }
     
     /**
-     * @param type reactor_id
+     * @param type $reactor_id
      * @return void
      */
     public function heartbeat( $reactor_id) { }
     
     /**
-     * @param type fd
-     * @param type reactor_id
+     * @param type $fd
+     * @param type $reactor_id
      * @return void
      */
     public function connection_info( $fd, $reactor_id) { }
     
     /**
-     * @param type start_fd
-     * @param type find_count
+     * @param type $start_fd
+     * @param type $find_count
      * @return void
      */
     public function connection_list( $start_fd, $find_count) { }
     
     /**
-     * @param type fd
-     * @param type reactor_id
+     * @param type $fd
+     * @param type $reactor_id
      * @return void
      */
     public function getClientInfo( $fd, $reactor_id) { }
     
     /**
-     * @param type start_fd
-     * @param type find_count
+     * @param type $start_fd
+     * @param type $find_count
      * @return void
      */
     public function getClientList( $start_fd, $find_count) { }
     
     /**
-     * @param type ms
-     * @param type callback
-     * @param type param
+     * @param type $ms
+     * @param type $callback
+     * @param type $param
      * @return void
      */
     public function after( $ms, $callback, $param) { }
     
     /**
-     * @param type ms
-     * @param type callback
+     * @param type $ms
+     * @param type $callback
      * @return void
      */
     public function tick( $ms, $callback) { }
     
     /**
-     * @param type timer_id
+     * @param type $timer_id
      * @return void
      */
     public function clearTimer( $timer_id) { }
     
     /**
-     * @param type callback
+     * @param type $callback
      * @return void
      */
     public function defer( $callback) { }
     
     /**
-     * @param type message
-     * @param type dst_worker_id
+     * @param type $message
+     * @param type $dst_worker_id
      * @return void
      */
     public function sendMessage( $message, $dst_worker_id) { }
     
     /**
-     * @param \swoole_process process
+     * @param \swoole_process $process
      * @return void
      */
     public function addProcess( \swoole_process $process) { }
@@ -398,8 +398,8 @@ class Server
     public function stats( ) { }
     
     /**
-     * @param type fd
-     * @param type uid
+     * @param type $fd
+     * @param type $uid
      * @return void
      */
     public function bind( $fd, $uid) { }

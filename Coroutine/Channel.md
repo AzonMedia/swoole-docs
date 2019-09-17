@@ -26,20 +26,20 @@ class Channel
     
     
     /**
-     * @param type size
+     * @param type $size
      * @return void
      */
     public function __construct( $size) { }
     
     /**
-     * @param type data
-     * @param type timeout
+     * @param type $data
+     * @param type $timeout
      * @return void
      */
     public function push( $data, $timeout) { }
     
     /**
-     * @param type timeout
+     * @param type $timeout
      * @return void
      */
     public function pop( $timeout) { }

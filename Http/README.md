@@ -1,8 +1,8 @@
 # ./classes/Swoole
 
 ## Classes
-* [Swoole\Http\Client](Http/Client.md)
-* [Swoole\Http\Request](Http/Request.md)
-* [Swoole\Http\Response](Http/Response.md)
-* [Swoole\Http\Server](Http/Server.md)
+* [Swoole\Http\Client](Client.md)
+* [Swoole\Http\Request](Request.md)
+* [Swoole\Http\Response](Response.md)
+* [Swoole\Http\Server](Server.md)
 

@@ -16,7 +16,7 @@ class Channel
     
     
     /**
-     * @param type size
+     * @param type $size
      * @return void
      */
     public function __construct( $size) { }
@@ -28,7 +28,7 @@ class Channel
     public function __destruct( ) { }
     
     /**
-     * @param type data
+     * @param type $data
      * @return void
      */
     public function push( $data) { }

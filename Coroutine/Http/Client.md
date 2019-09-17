@@ -106,9 +106,9 @@ class Client
     
     
     /**
-     * @param type host
-     * @param type port
-     * @param type ssl
+     * @param type $host
+     * @param type $port
+     * @param type $ssl
      * @return void
      */
     public function __construct( $host, $port, $ssl) { }
@@ -120,7 +120,7 @@ class Client
     public function __destruct( ) { }
     
     /**
-     * @param array settings
+     * @param array $settings
      * @return void
      */
     public function set( array $settings) { }
@@ -132,98 +132,98 @@ class Client
     public function getDefer( ) { }
     
     /**
-     * @param type defer
+     * @param type $defer
      * @return void
      */
     public function setDefer( $defer) { }
     
     /**
-     * @param type method
+     * @param type $method
      * @return void
      */
     public function setMethod( $method) { }
     
     /**
-     * @param array headers
+     * @param array $headers
      * @return void
      */
     public function setHeaders( array $headers) { }
     
     /**
-     * @param array cookies
+     * @param array $cookies
      * @return void
      */
     public function setCookies( array $cookies) { }
     
     /**
-     * @param type data
+     * @param type $data
      * @return void
      */
     public function setData( $data) { }
     
     /**
-     * @param type path
+     * @param type $path
      * @return void
      */
     public function execute( $path) { }
     
     /**
-     * @param type path
+     * @param type $path
      * @return void
      */
     public function get( $path) { }
     
     /**
-     * @param type path
-     * @param type data
+     * @param type $path
+     * @param type $data
      * @return void
      */
     public function post( $path, $data) { }
     
     /**
-     * @param type path
-     * @param type file
-     * @param type offset
+     * @param type $path
+     * @param type $file
+     * @param type $offset
      * @return void
      */
     public function download( $path, $file, $offset) { }
     
     /**
-     * @param type path
+     * @param type $path
      * @return void
      */
     public function upgrade( $path) { }
     
     /**
-     * @param type path
-     * @param type name
-     * @param type type
-     * @param type filename
-     * @param type offset
-     * @param type length
+     * @param type $path
+     * @param type $name
+     * @param type $type
+     * @param type $filename
+     * @param type $offset
+     * @param type $length
      * @return void
      */
     public function addFile( $path, $name, $type, $filename, $offset, $length) { }
     
     /**
-     * @param type path
-     * @param type name
-     * @param type type
-     * @param type filename
+     * @param type $path
+     * @param type $name
+     * @param type $type
+     * @param type $filename
      * @return void
      */
     public function addData( $path, $name, $type, $filename) { }
     
     /**
-     * @param type timeout
+     * @param type $timeout
      * @return void
      */
     public function recv( $timeout) { }
     
     /**
-     * @param type data
-     * @param type opcode
-     * @param type finish
+     * @param type $data
+     * @param type $opcode
+     * @param type $finish
      * @return void
      */
     public function push( $data, $opcode, $finish) { }

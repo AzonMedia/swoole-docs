@@ -36,7 +36,7 @@ final class Task
     
     
     /**
-     * @param type data
+     * @param type $data
      * @return void
      */
     public function finish( $data) { }

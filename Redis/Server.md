@@ -57,17 +57,17 @@ class Server extends \Swoole\Server
     public function start( ) { }
     
     /**
-     * @param type command
-     * @param type callback
-     * @param type number_of_string_param
-     * @param type type_of_array_param
+     * @param type $command
+     * @param type $callback
+     * @param type $number_of_string_param
+     * @param type $type_of_array_param
      * @return void
      */
     public function setHandler( $command, $callback, $number_of_string_param, $type_of_array_param) { }
     
     /**
-     * @param type type
-     * @param type value
+     * @param type $type
+     * @param type $value
      * @return void
      */
     public static function format( $type, $value) { }

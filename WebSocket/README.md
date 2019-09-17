@@ -1,7 +1,7 @@
 # ./classes/Swoole
 
 ## Classes
-* [Swoole\WebSocket\CloseFrame](WebSocket/CloseFrame.md)
-* [Swoole\WebSocket\Frame](WebSocket/Frame.md)
-* [Swoole\WebSocket\Server](WebSocket/Server.md)
+* [Swoole\WebSocket\CloseFrame](CloseFrame.md)
+* [Swoole\WebSocket\Frame](Frame.md)
+* [Swoole\WebSocket\Server](Server.md)
 

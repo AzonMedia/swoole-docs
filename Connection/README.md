@@ -1,5 +1,5 @@
 # ./classes/Swoole
 
 ## Classes
-* [Swoole\Connection\Iterator](Connection/Iterator.md)
+* [Swoole\Connection\Iterator](Iterator.md)
 

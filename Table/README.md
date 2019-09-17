@@ -1,5 +1,5 @@
 # ./classes/Swoole
 
 ## Classes
-* [Swoole\Table\Row](Table/Row.md)
+* [Swoole\Table\Row](Row.md)
 

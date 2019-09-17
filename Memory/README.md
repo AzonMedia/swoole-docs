@@ -1,8 +1,8 @@
 # ./classes/Swoole
 ## Namespaces
-* [Swoole\Memory\Pool](Memory/Pool)
+* [Swoole\Memory\Pool](Pool)
 
 
 ## Classes
-* [Swoole\Memory\Pool](Memory/Pool.md)
+* [Swoole\Memory\Pool](Pool.md)
 

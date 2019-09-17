@@ -16,9 +16,9 @@ class Pool
     
     
     /**
-     * @param type worker_num
-     * @param type ipc_type
-     * @param type msgqueue_key
+     * @param type $worker_num
+     * @param type $ipc_type
+     * @param type $msgqueue_key
      * @return void
      */
     public function __construct( $worker_num, $ipc_type, $msgqueue_key) { }
@@ -30,8 +30,8 @@ class Pool
     public function __destruct( ) { }
     
     /**
-     * @param type event_name
-     * @param type callback
+     * @param type $event_name
+     * @param type $callback
      * @return void
      */
     public function on( $event_name, $callback) { }
@@ -43,15 +43,15 @@ class Pool
     public function getProcess( ) { }
     
     /**
-     * @param type host
-     * @param type port
-     * @param type backlog
+     * @param type $host
+     * @param type $port
+     * @param type $backlog
      * @return void
      */
     public function listen( $host, $port, $backlog) { }
     
     /**
-     * @param type data
+     * @param type $data
      * @return void
      */
     public function write( $data) { }

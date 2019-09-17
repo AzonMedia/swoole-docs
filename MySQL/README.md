@@ -1,5 +1,5 @@
 # ./classes/Swoole
 
 ## Classes
-* [Swoole\MySQL\Exception](MySQL/Exception.md)
+* [Swoole\MySQL\Exception](Exception.md)
 

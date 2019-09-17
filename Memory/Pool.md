@@ -41,10 +41,10 @@ class Pool
     
     
     /**
-     * @param type size
-     * @param type type
-     * @param type slice_size
-     * @param type shared
+     * @param type $size
+     * @param type $type
+     * @param type $slice_size
+     * @param type $shared
      * @return void
      */
     public function __construct( $size, $type, $slice_size, $shared) { }
@@ -56,7 +56,7 @@ class Pool
     public function __destruct( ) { }
     
     /**
-     * @param type size
+     * @param type $size
      * @return void
      */
     public function alloc( $size) { }

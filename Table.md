@@ -31,16 +31,16 @@ class Table implements \Iterator, \ArrayAccess, \Countable
     
     
     /**
-     * @param type table_size
-     * @param type conflict_proportion
+     * @param type $table_size
+     * @param type $conflict_proportion
      * @return void
      */
     public function __construct( $table_size, $conflict_proportion) { }
     
     /**
-     * @param type name
-     * @param type type
-     * @param type size
+     * @param type $name
+     * @param type $type
+     * @param type $size
      * @return void
      */
     public function column( $name, $type, $size) { }
@@ -58,15 +58,15 @@ class Table implements \Iterator, \ArrayAccess, \Countable
     public function destroy( ) { }
     
     /**
-     * @param type key
-     * @param array value
+     * @param type $key
+     * @param array $value
      * @return void
      */
     public function set( $key, array $value) { }
     
     /**
-     * @param type key
-     * @param type field
+     * @param type $key
+     * @param type $field
      * @return void
      */
     public function get( $key, $field) { }
@@ -78,35 +78,35 @@ class Table implements \Iterator, \ArrayAccess, \Countable
     public function count( ) { }
     
     /**
-     * @param type key
+     * @param type $key
      * @return void
      */
     public function del( $key) { }
     
     /**
-     * @param type key
+     * @param type $key
      * @return void
      */
     public function exists( $key) { }
     
     /**
-     * @param type key
+     * @param type $key
      * @return void
      */
     public function exist( $key) { }
     
     /**
-     * @param type key
-     * @param type column
-     * @param type incrby
+     * @param type $key
+     * @param type $column
+     * @param type $incrby
      * @return void
      */
     public function incr( $key, $column, $incrby) { }
     
     /**
-     * @param type key
-     * @param type column
-     * @param type decrby
+     * @param type $key
+     * @param type $column
+     * @param type $decrby
      * @return void
      */
     public function decr( $key, $column, $decrby) { }
@@ -118,26 +118,26 @@ class Table implements \Iterator, \ArrayAccess, \Countable
     public function getMemorySize( ) { }
     
     /**
-     * @param type offset
+     * @param type $offset
      * @return void
      */
     public function offsetExists( $offset) { }
     
     /**
-     * @param type offset
+     * @param type $offset
      * @return void
      */
     public function offsetGet( $offset) { }
     
     /**
-     * @param type offset
-     * @param type value
+     * @param type $offset
+     * @param type $value
      * @return void
      */
     public function offsetSet( $offset, $value) { }
     
     /**
-     * @param type offset
+     * @param type $offset
      * @return void
      */
     public function offsetUnset( $offset) { }

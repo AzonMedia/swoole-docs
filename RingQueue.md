@@ -16,7 +16,7 @@ class RingQueue
     
     
     /**
-     * @param type len
+     * @param type $len
      * @return void
      */
     public function __construct( $len) { }
@@ -28,7 +28,7 @@ class RingQueue
     public function __destruct( ) { }
     
     /**
-     * @param type data
+     * @param type $data
      * @return void
      */
     public function push( $data) { }

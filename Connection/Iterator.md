@@ -58,26 +58,26 @@ class Iterator implements \Iterator, \ArrayAccess, \Countable
     public function __destruct( ) { }
     
     /**
-     * @param type fd
+     * @param type $fd
      * @return void
      */
     public function offsetExists( $fd) { }
     
     /**
-     * @param type fd
+     * @param type $fd
      * @return void
      */
     public function offsetGet( $fd) { }
     
     /**
-     * @param type fd
-     * @param type value
+     * @param type $fd
+     * @param type $value
      * @return void
      */
     public function offsetSet( $fd, $value) { }
     
     /**
-     * @param type fd
+     * @param type $fd
      * @return void
      */
     public function offsetUnset( $fd) { }

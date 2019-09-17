@@ -42,16 +42,16 @@ class Frame
     public function __toString( ) { }
     
     /**
-     * @param type data
-     * @param type opcode
-     * @param type finish
-     * @param type mask
+     * @param type $data
+     * @param type $opcode
+     * @param type $finish
+     * @param type $mask
      * @return void
      */
     public static function pack( $data, $opcode, $finish, $mask) { }
     
     /**
-     * @param type data
+     * @param type $data
      * @return void
      */
     public static function unpack( $data) { }

@@ -21,71 +21,71 @@ class Socket
     
     
     /**
-     * @param type domain
-     * @param type type
-     * @param type protocol
+     * @param type $domain
+     * @param type $type
+     * @param type $protocol
      * @return void
      */
     public function __construct( $domain, $type, $protocol) { }
     
     /**
-     * @param type address
-     * @param type port
+     * @param type $address
+     * @param type $port
      * @return void
      */
     public function bind( $address, $port) { }
     
     /**
-     * @param type backlog
+     * @param type $backlog
      * @return void
      */
     public function listen( $backlog) { }
     
     /**
-     * @param type timeout
+     * @param type $timeout
      * @return void
      */
     public function accept( $timeout) { }
     
     /**
-     * @param type host
-     * @param type port
-     * @param type timeout
+     * @param type $host
+     * @param type $port
+     * @param type $timeout
      * @return void
      */
     public function connect( $host, $port, $timeout) { }
     
     /**
-     * @param type length
-     * @param type timeout
+     * @param type $length
+     * @param type $timeout
      * @return void
      */
     public function recv( $length, $timeout) { }
     
     /**
-     * @param type data
-     * @param type timeout
+     * @param type $data
+     * @param type $timeout
      * @return void
      */
     public function send( $data, $timeout) { }
     
     /**
-     * @param type peername
-     * @param type timeout
+     * @param type $peername
+     * @param type $timeout
      * @return void
      */
     public function recvfrom( &$peername, $timeout) { }
     
     /**
-     * @param type addr
-     * @param type port
-     * @param type data
+     * @param type $addr
+     * @param type $port
+     * @param type $data
      * @return void
      */
     public function sendto( $addr, $port, $data) { }
     
     /**
-     * @param type how
+     * @param type $how
      * @return void
      */
     public function shutdown( $how) { }

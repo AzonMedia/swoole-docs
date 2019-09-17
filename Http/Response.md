@@ -42,73 +42,73 @@ class Response
     public function initHeader( ) { }
     
     /**
-     * @param type name
-     * @param type value
-     * @param type expires
-     * @param type path
-     * @param type domain
-     * @param type secure
-     * @param type httponly
+     * @param type $name
+     * @param type $value
+     * @param type $expires
+     * @param type $path
+     * @param type $domain
+     * @param type $secure
+     * @param type $httponly
      * @return void
      */
     public function cookie( $name, $value, $expires, $path, $domain, $secure, $httponly) { }
     
     /**
-     * @param type name
-     * @param type value
-     * @param type expires
-     * @param type path
-     * @param type domain
-     * @param type secure
-     * @param type httponly
+     * @param type $name
+     * @param type $value
+     * @param type $expires
+     * @param type $path
+     * @param type $domain
+     * @param type $secure
+     * @param type $httponly
      * @return void
      */
     public function rawcookie( $name, $value, $expires, $path, $domain, $secure, $httponly) { }
     
     /**
-     * @param type http_code
-     * @param type reason
+     * @param type $http_code
+     * @param type $reason
      * @return void
      */
     public function status( $http_code, $reason) { }
     
     /**
-     * @param type compress_level
+     * @param type $compress_level
      * @return void
      */
     public function gzip( $compress_level) { }
     
     /**
-     * @param type key
-     * @param type value
-     * @param type ucwords
+     * @param type $key
+     * @param type $value
+     * @param type $ucwords
      * @return void
      */
     public function header( $key, $value, $ucwords) { }
     
     /**
-     * @param type content
+     * @param type $content
      * @return void
      */
     public function write( $content) { }
     
     /**
-     * @param type content
+     * @param type $content
      * @return void
      */
     public function end( $content) { }
     
     /**
-     * @param type filename
-     * @param type offset
-     * @param type length
+     * @param type $filename
+     * @param type $offset
+     * @param type $length
      * @return void
      */
     public function sendfile( $filename, $offset, $length) { }
     
     /**
-     * @param type location
-     * @param type http_code
+     * @param type $location
+     * @param type $http_code
      * @return void
      */
     public function redirect( $location, $http_code) { }
@@ -120,7 +120,7 @@ class Response
     public function detach( ) { }
     
     /**
-     * @param type fd
+     * @param type $fd
      * @return void
      */
     public static function create( $fd) { }

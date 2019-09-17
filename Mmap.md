@@ -16,9 +16,9 @@ class Mmap
     
     
     /**
-     * @param type filename
-     * @param type size
-     * @param type offset
+     * @param type $filename
+     * @param type $size
+     * @param type $offset
      * @return void
      */
     public static function open( $filename, $size, $offset) { }

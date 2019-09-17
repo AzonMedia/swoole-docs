@@ -46,8 +46,8 @@ class Lock
     
     
     /**
-     * @param type type
-     * @param type filename
+     * @param type $type
+     * @param type $filename
      * @return void
      */
     public function __construct( $type, $filename) { }
@@ -65,7 +65,7 @@ class Lock
     public function lock( ) { }
     
     /**
-     * @param type timeout
+     * @param type $timeout
      * @return void
      */
     public function lockwait( $timeout) { }

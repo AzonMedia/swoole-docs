@@ -113,33 +113,33 @@ class MySQL
     public function __destruct( ) { }
     
     /**
-     * @param array server_config
-     * @param type callback
+     * @param array $server_config
+     * @param type $callback
      * @return void
      */
     public function connect( array $server_config, $callback) { }
     
     /**
-     * @param type callback
+     * @param type $callback
      * @return void
      */
     public function begin( $callback) { }
     
     /**
-     * @param type callback
+     * @param type $callback
      * @return void
      */
     public function commit( $callback) { }
     
     /**
-     * @param type callback
+     * @param type $callback
      * @return void
      */
     public function rollback( $callback) { }
     
     /**
-     * @param type sql
-     * @param type callback
+     * @param type $sql
+     * @param type $callback
      * @return void
      */
     public function query( $sql, $callback) { }
@@ -157,8 +157,8 @@ class MySQL
     public function getState( ) { }
     
     /**
-     * @param type event_name
-     * @param type callback
+     * @param type $event_name
+     * @param type $callback
      * @return void
      */
     public function on( $event_name, $callback) { }

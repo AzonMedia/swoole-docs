@@ -36,8 +36,8 @@ class Statement
     
     
     /**
-     * @param type params
-     * @param type timeout
+     * @param type $params
+     * @param type $timeout
      * @return void
      */
     public function execute( $params, $timeout) { }

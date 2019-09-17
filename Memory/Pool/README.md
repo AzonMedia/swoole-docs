@@ -1,5 +1,5 @@
 # ./classes/Swoole/Memory
 
 ## Classes
-* [Swoole\Memory\Pool\Slice](Memory/Pool/Slice.md)
+* [.\classes\Swoole\Memory\Pool\Slice](Slice.md)
 

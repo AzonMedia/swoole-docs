@@ -1,5 +1,5 @@
 # ./classes/Swoole
 
 ## Classes
-* [Swoole\Redis\Server](Redis/Server.md)
+* [Swoole\Redis\Server](Server.md)
 

@@ -86,7 +86,7 @@ class Redis
     
     
     /**
-     * @param null|array setting
+     * @param null|array $setting
      * @return void
      */
     public function __construct( ?array $setting) { }
@@ -98,16 +98,16 @@ class Redis
     public function __destruct( ) { }
     
     /**
-     * @param type event_name
-     * @param type callback
+     * @param type $event_name
+     * @param type $callback
      * @return void
      */
     public function on( $event_name, $callback) { }
     
     /**
-     * @param type host
-     * @param type port
-     * @param type callback
+     * @param type $host
+     * @param type $port
+     * @param type $callback
      * @return void
      */
     public function connect( $host, $port, $callback) { }
@@ -125,8 +125,8 @@ class Redis
     public function getState( ) { }
     
     /**
-     * @param type command
-     * @param type params
+     * @param type $command
+     * @param type $params
      * @return void
      */
     public function __call( $command, $params) { }

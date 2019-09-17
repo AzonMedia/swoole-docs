@@ -16,15 +16,15 @@ class Slice
     
     
     /**
-     * @param type size
-     * @param type offset
+     * @param type $size
+     * @param type $offset
      * @return void
      */
     public function read( $size, $offset) { }
     
     /**
-     * @param type data
-     * @param type offset
+     * @param type $data
+     * @param type $offset
      * @return void
      */
     public function write( $data, $offset) { }

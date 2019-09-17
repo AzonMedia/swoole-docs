@@ -108,14 +108,14 @@ class Port
     public function __destruct( ) { }
     
     /**
-     * @param array settings
+     * @param array $settings
      * @return void
      */
     public function set( array $settings) { }
     
     /**
-     * @param type event_name
-     * @param type callback
+     * @param type $event_name
+     * @param type $callback
      * @return void
      */
     public function on( $event_name, $callback) { }

@@ -121,8 +121,8 @@ class Client
     
     
     /**
-     * @param type type
-     * @param type async
+     * @param type $type
+     * @param type $async
      * @return void
      */
     public function __construct( $type, $async) { }
@@ -134,52 +134,52 @@ class Client
     public function __destruct( ) { }
     
     /**
-     * @param array settings
+     * @param array $settings
      * @return void
      */
     public function set( array $settings) { }
     
     /**
-     * @param type host
-     * @param type port
-     * @param type timeout
-     * @param type sock_flag
+     * @param type $host
+     * @param type $port
+     * @param type $timeout
+     * @param type $sock_flag
      * @return void
      */
     public function connect( $host, $port, $timeout, $sock_flag) { }
     
     /**
-     * @param type size
-     * @param type flag
+     * @param type $size
+     * @param type $flag
      * @return void
      */
     public function recv( $size, $flag) { }
     
     /**
-     * @param type data
-     * @param type flag
+     * @param type $data
+     * @param type $flag
      * @return void
      */
     public function send( $data, $flag) { }
     
     /**
-     * @param type dst_socket
+     * @param type $dst_socket
      * @return void
      */
     public function pipe( $dst_socket) { }
     
     /**
-     * @param type filename
-     * @param type offset
-     * @param type length
+     * @param type $filename
+     * @param type $offset
+     * @param type $length
      * @return void
      */
     public function sendfile( $filename, $offset, $length) { }
     
     /**
-     * @param type ip
-     * @param type port
-     * @param type data
+     * @param type $ip
+     * @param type $port
+     * @param type $data
      * @return void
      */
     public function sendto( $ip, $port, $data) { }
@@ -209,13 +209,13 @@ class Client
     public function resume( ) { }
     
     /**
-     * @param type how
+     * @param type $how
      * @return void
      */
     public function shutdown( $how) { }
     
     /**
-     * @param type callback
+     * @param type $callback
      * @return void
      */
     public function enableSSL( $callback) { }
@@ -251,14 +251,14 @@ class Client
     public function getpeername( ) { }
     
     /**
-     * @param type force
+     * @param type $force
      * @return void
      */
     public function close( $force) { }
     
     /**
-     * @param type event_name
-     * @param type callback
+     * @param type $event_name
+     * @param type $callback
      * @return void
      */
     public function on( $event_name, $callback) { }
