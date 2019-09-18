@@ -1,4 +1,15 @@
 # Swoole
+
+## Introduction
+
+This project contains unofficial swoole documentation. This documentation is partial and supplements the existing [official swoole documentation](https://www.swoole.co.uk/docs/).
+It consists of documentation pulled from various sources, reverse engineering, examples, experience from real life applicaltions.
+
+## Sources
+
+- [wiki.swoole.com](http://wiki.swoole.com)
+- [swoole.co.uk](http://swoole.co.uk)
+
 ## Namespaces
 * [Swoole\Atomic](Atomic)
 * [Swoole\Connection](Connection)
