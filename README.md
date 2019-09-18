@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project contains unofficial swoole documentation. This documentation is partial and supplements the existing [official swoole documentation](https://www.swoole.co.uk/docs/).
+This project contains unofficial swoole documentation. This documentation is partial and supplements the existing documentation.
 It consists of documentation pulled from various sources, reverse engineering, examples, experience from real life applicaltions.
 
 ## Sources
