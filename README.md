@@ -2,8 +2,16 @@
 
 ## Introduction
 
-This project contains unofficial swoole documentation. This documentation is partial and supplements the existing documentation.
+This project contains unofficial Swoole documentation. This documentation is partial and supplements the existing documentation.
 It consists of documentation pulled from various sources, reverse engineering, examples, experience from real life applicaltions.
+
+The given APIs are as they are defined in the Swoole extension.
+The given docblocks are when the actual types of the arguments should be and the expected return types.
+The docblocks also contain additional information about each method and deprecation notices wherever applicable.
+
+The documentation currently references Swoole 4.4.5.
+
+The sections that have documentation added are marked with an *. The rest of the sections contain just API reference.
 
 ## Sources
 
