@@ -21,6 +21,18 @@ class Iterator implements \Iterator, \ArrayAccess, \Countable
      * 
      * @return void
      */
+    public function __construct( ) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public function __destruct( ) { }
+    
+    /**
+     * 
+     * @return void
+     */
     public function rewind( ) { }
     
     /**
@@ -52,12 +64,6 @@ class Iterator implements \Iterator, \ArrayAccess, \Countable
      * @return void
      */
     public function count( ) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public function __destruct( ) { }
     
     /**
      * @param type $fd

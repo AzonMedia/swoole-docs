@@ -38,18 +38,6 @@ class Server extends \Swoole\Http\Server
      * @param type $fd
      * @return void
      */
-    public function exists( $fd) { }
-    
-    /**
-     * @param type $fd
-     * @return void
-     */
-    public function exist( $fd) { }
-    
-    /**
-     * @param type $fd
-     * @return void
-     */
     public function isEstablished( $fd) { }
     
     /**

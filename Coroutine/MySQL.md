@@ -33,12 +33,12 @@ class MySQL
     /**
      * @var 
      */
-    public $connect_error;
+    public $connect_errno;
     
     /**
      * @var 
      */
-    public $connect_errno;
+    public $connect_error;
     
     /**
      * @var 
@@ -75,6 +75,18 @@ class MySQL
     public function __destruct( ) { }
     
     /**
+     * 
+     * @return void
+     */
+    public function getDefer( ) { }
+    
+    /**
+     * @param type $defer
+     * @return void
+     */
+    public function setDefer( $defer) { }
+    
+    /**
      * @param array $server_config
      * @return void
      */
@@ -91,13 +103,32 @@ class MySQL
      * 
      * @return void
      */
-    public function recv( ) { }
+    public function fetch( ) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public function fetchAll( ) { }
     
     /**
      * 
      * @return void
      */
     public function nextResult( ) { }
+    
+    /**
+     * @param type $query
+     * @param type $timeout
+     * @return void
+     */
+    public function prepare( $query, $timeout) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public function recv( ) { }
     
     /**
      * @param type $timeout
@@ -116,25 +147,6 @@ class MySQL
      * @return void
      */
     public function rollback( $timeout) { }
-    
-    /**
-     * @param type $query
-     * @param type $timeout
-     * @return void
-     */
-    public function prepare( $query, $timeout) { }
-    
-    /**
-     * @param type $defer
-     * @return void
-     */
-    public function setDefer( $defer) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public function getDefer( ) { }
     
     /**
      * 

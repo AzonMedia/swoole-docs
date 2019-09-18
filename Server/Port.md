@@ -58,12 +58,12 @@ class Port
     /**
      * @var 
      */
-    private $onMessage;
+    private $onOpen;
     
     /**
      * @var 
      */
-    private $onOpen;
+    private $onMessage;
     
     /**
      * @var 
@@ -117,10 +117,16 @@ class Port
     
     /**
      * @param type $event_name
-     * @param type $callback
+     * @param callable $callback
      * @return void
      */
-    public function on( $event_name, $callback) { }
+    public function on( $event_name, callable $callback) { }
+    
+    /**
+     * @param type $event_name
+     * @return void
+     */
+    public function getCallback( $event_name) { }
     
 }
 

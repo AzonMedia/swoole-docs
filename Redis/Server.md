@@ -60,12 +60,16 @@ class Server extends \Swoole\Server
     
     /**
      * @param type $command
-     * @param type $callback
-     * @param type $number_of_string_param
-     * @param type $type_of_array_param
+     * @param callable $callback
      * @return void
      */
-    public function setHandler( $command, $callback, $number_of_string_param, $type_of_array_param) { }
+    public function setHandler( $command, callable $callback) { }
+    
+    /**
+     * @param type $command
+     * @return void
+     */
+    public function getHandler( $command) { }
     
     /**
      * @param type $type

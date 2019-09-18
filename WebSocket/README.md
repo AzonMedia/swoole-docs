@@ -1,4 +1,4 @@
-# ./classes/Swoole
+# Swoole\WebSocket
 
 ## Classes
 * [Swoole\WebSocket\CloseFrame](CloseFrame.md)

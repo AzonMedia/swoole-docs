@@ -18,17 +18,12 @@ class Server extends \Swoole\Server
     /**
      * @var 
      */
-    public $onRequest;
+    private $onRequest;
     
     /**
      * @var 
      */
-    public $onHandshake;
-    
-    /**
-     * @var 
-     */
-    public $setting;
+    private $onHandshake;
     
     
     

@@ -23,17 +23,17 @@ class Request
     /**
      * @var 
      */
+    public $streamId;
+    
+    /**
+     * @var 
+     */
     public $header;
     
     /**
      * @var 
      */
     public $server;
-    
-    /**
-     * @var 
-     */
-    public $request;
     
     /**
      * @var 
@@ -66,7 +66,7 @@ class Request
      * 
      * @return void
      */
-    public function rawcontent( ) { }
+    public function rawContent( ) { }
     
     /**
      * 

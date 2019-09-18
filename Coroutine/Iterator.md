@@ -13,51 +13,19 @@ namespace Swoole\Coroutine;
  * Class Iterator
  * @package Swoole\Coroutine
  */
-class Iterator implements \Iterator, \Countable
+class Iterator extends \ArrayIterator
 {
     
+    /**
+     * @var integer
+     */
+    public const STD_PROP_LIST = 1;
     
     /**
-     * 
-     * @return void
+     * @var integer
      */
-    public function rewind( ) { }
+    public const ARRAY_AS_PROPS = 2;
     
-    /**
-     * 
-     * @return void
-     */
-    public function next( ) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public function current( ) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public function key( ) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public function valid( ) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public function count( ) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public function __destruct( ) { }
     
 }
 

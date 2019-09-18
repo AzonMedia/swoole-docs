@@ -1,4 +1,4 @@
-# Swoole\MySQL\Exception
+# Swoole\Coroutine\Http\Client\Exception
 
 ## Intrduction
 
@@ -7,11 +7,11 @@
 ```php
 <?php
 
-namespace Swoole\MySQL;
+namespace Swoole\Coroutine\Http\Client;
 
 /**
  * Class Exception
- * @package Swoole\MySQL
+ * @package Swoole\Coroutine\Http\Client
  */
 class Exception extends \Swoole\Exception
 {

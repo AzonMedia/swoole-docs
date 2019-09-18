@@ -1,6 +1,6 @@
-# ./classes/Swoole/Coroutine
+# Swoole\Coroutine\MySQL
 
 ## Classes
-* [.\classes\Swoole\Coroutine\MySQL\Exception](Exception.md)
-* [.\classes\Swoole\Coroutine\MySQL\Statement](Statement.md)
+* [Swoole\Coroutine\MySQL\Exception](Exception.md)
+* [Swoole\Coroutine\MySQL\Statement](Statement.md)
 

@@ -702,6 +702,36 @@ class Redis
     
     /**
      * @param type $key
+     * @param type $count
+     * @return void
+     */
+    public function zPopMin( $key, $count) { }
+    
+    /**
+     * @param type $key
+     * @param type $count
+     * @return void
+     */
+    public function zPopMax( $key, $count) { }
+    
+    /**
+     * @param type $key
+     * @param type $timeout_or_key
+     * @param type $extra_args
+     * @return void
+     */
+    public function bzPopMin( $key, $timeout_or_key, $extra_args) { }
+    
+    /**
+     * @param type $key
+     * @param type $timeout_or_key
+     * @param type $extra_args
+     * @return void
+     */
+    public function bzPopMax( $key, $timeout_or_key, $extra_args) { }
+    
+    /**
+     * @param type $key
      * @param type $min
      * @param type $max
      * @return void

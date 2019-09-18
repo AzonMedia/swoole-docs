@@ -19,12 +19,12 @@ class Event
     
     /**
      * @param type $fd
-     * @param type $read_callback
-     * @param type $write_callback
+     * @param null|callable $read_callback
+     * @param null|callable $write_callback
      * @param type $events
      * @return void
      */
-    public static function add( $fd, $read_callback, $write_callback, $events) { }
+    public static function add( $fd, ?callable $read_callback, ?callable $write_callback, $events) { }
     
     /**
      * @param type $fd
@@ -34,18 +34,38 @@ class Event
     
     /**
      * @param type $fd
-     * @param type $read_callback
-     * @param type $write_callback
+     * @param null|callable $read_callback
+     * @param null|callable $write_callback
      * @param type $events
      * @return void
      */
-    public static function set( $fd, $read_callback, $write_callback, $events) { }
+    public static function set( $fd, ?callable $read_callback, ?callable $write_callback, $events) { }
+    
+    /**
+     * @param type $fd
+     * @param type $events
+     * @return void
+     */
+    public static function isset( $fd, $events) { }
     
     /**
      * 
      * @return void
      */
-    public static function exit( ) { }
+    public static function dispatch( ) { }
+    
+    /**
+     * @param callable $callback
+     * @return void
+     */
+    public static function defer( callable $callback) { }
+    
+    /**
+     * @param null|callable $callback
+     * @param type $before
+     * @return void
+     */
+    public static function cycle( ?callable $callback, $before) { }
     
     /**
      * @param type $fd
@@ -61,17 +81,16 @@ class Event
     public static function wait( ) { }
     
     /**
-     * @param type $callback
+     * 
      * @return void
      */
-    public static function defer( $callback) { }
+    public static function rshutdown( ) { }
     
     /**
-     * @param type $callback
-     * @param type $before
+     * 
      * @return void
      */
-    public static function cycle( $callback, $before) { }
+    public static function exit( ) { }
     
 }
 

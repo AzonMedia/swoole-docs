@@ -23,6 +23,11 @@ class Response
     /**
      * @var 
      */
+    public $socket;
+    
+    /**
+     * @var 
+     */
     public $header;
     
     /**
@@ -65,6 +70,18 @@ class Response
      * @param type $httponly
      * @return void
      */
+    public function setCookie( $name, $value, $expires, $path, $domain, $secure, $httponly) { }
+    
+    /**
+     * @param type $name
+     * @param type $value
+     * @param type $expires
+     * @param type $path
+     * @param type $domain
+     * @param type $secure
+     * @param type $httponly
+     * @return void
+     */
     public function rawcookie( $name, $value, $expires, $path, $domain, $secure, $httponly) { }
     
     /**
@@ -75,10 +92,11 @@ class Response
     public function status( $http_code, $reason) { }
     
     /**
-     * @param type $compress_level
+     * @param type $http_code
+     * @param type $reason
      * @return void
      */
-    public function gzip( $compress_level) { }
+    public function setStatusCode( $http_code, $reason) { }
     
     /**
      * @param type $key
@@ -87,6 +105,27 @@ class Response
      * @return void
      */
     public function header( $key, $value, $ucwords) { }
+    
+    /**
+     * @param type $key
+     * @param type $value
+     * @param type $ucwords
+     * @return void
+     */
+    public function setHeader( $key, $value, $ucwords) { }
+    
+    /**
+     * @param type $key
+     * @param type $value
+     * @return void
+     */
+    public function trailer( $key, $value) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public function ping( ) { }
     
     /**
      * @param type $content
@@ -126,6 +165,24 @@ class Response
      * @return void
      */
     public static function create( $fd) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public function upgrade( ) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public function push( ) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public function recv( ) { }
     
     /**
      * 

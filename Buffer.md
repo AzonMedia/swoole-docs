@@ -15,6 +15,16 @@ namespace Swoole;
  */
 class Buffer
 {
+    /**
+     * @var integer
+     */
+    public $capacity = 128;
+    
+    /**
+     * @var 
+     */
+    public $length;
+    
     
     
     /**
@@ -38,10 +48,10 @@ class Buffer
     /**
      * @param type $offset
      * @param type $length
-     * @param type $seek
+     * @param type $remove
      * @return void
      */
-    public function substr( $offset, $length, $seek) { }
+    public function substr( $offset, $length, $remove) { }
     
     /**
      * @param type $offset

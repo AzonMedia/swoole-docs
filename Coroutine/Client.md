@@ -21,9 +21,19 @@ class Client
     public $errCode;
     
     /**
+     * @var 
+     */
+    public $errMsg;
+    
+    /**
      * @var integer
      */
-    public $sock = -1;
+    public $fd = -1;
+    
+    /**
+     * @var 
+     */
+    private $socket;
     
     /**
      * @var 
@@ -135,24 +145,6 @@ class Client
      * 
      * @return void
      */
-    public function enableSSL( ) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public function getPeerCert( ) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public function verifyPeerCert( ) { }
-    
-    /**
-     * 
-     * @return void
-     */
     public function isConnected( ) { }
     
     /**
@@ -172,6 +164,12 @@ class Client
      * @return void
      */
     public function close( ) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public function exportSocket( ) { }
     
 }
 

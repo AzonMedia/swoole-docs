@@ -1,5 +1,9 @@
-# ./classes/Swoole/Coroutine
+# Swoole\Coroutine\Http
+## Namespaces
+* [Swoole\Coroutine\Http\Client](Client)
+
 
 ## Classes
-* [.\classes\Swoole\Coroutine\Http\Client](Client.md)
+* [Swoole\Coroutine\Http\Client](Client.md)
+* [Swoole\Coroutine\Http\Server](Server.md)
 

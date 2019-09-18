@@ -18,25 +18,11 @@ class Coroutine
     
     
     /**
-     * @param type $func
+     * @param callable $func
      * @param type $params
      * @return void
      */
-    public static function create( $func, $params) { }
-    
-    /**
-     * @param type $command
-     * @return void
-     */
-    public static function exec( $command) { }
-    
-    /**
-     * @param type $domain_name
-     * @param type $family
-     * @param type $timeout
-     * @return void
-     */
-    public static function gethostbyname( $domain_name, $family, $timeout) { }
+    public static function create( callable $func, $params) { }
     
     /**
      * @param type $callback
@@ -93,10 +79,70 @@ class Coroutine
     public static function getuid( ) { }
     
     /**
+     * @param type $cid
+     * @return void
+     */
+    public static function getPcid( $cid) { }
+    
+    /**
+     * @param type $cid
+     * @return void
+     */
+    public static function getContext( $cid) { }
+    
+    /**
+     * @param type $cid
+     * @param type $options
+     * @param type $limit
+     * @return void
+     */
+    public static function getBackTrace( $cid, $options, $limit) { }
+    
+    /**
      * 
      * @return void
      */
-    public static function getPcid( ) { }
+    public static function list( ) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public static function listCoroutines( ) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public static function enableScheduler( ) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public static function disableScheduler( ) { }
+    
+    /**
+     * @param type $domain_name
+     * @param type $family
+     * @param type $timeout
+     * @return void
+     */
+    public static function gethostbyname( $domain_name, $family, $timeout) { }
+    
+    /**
+     * @param type $domain_name
+     * @param type $timeout
+     * @return void
+     */
+    public static function dnsLookup( $domain_name, $timeout) { }
+    
+    /**
+     * @param type $command
+     * @param type $get_error_stream
+     * @return void
+     */
+    public static function exec( $command, $get_error_stream) { }
     
     /**
      * @param type $seconds
@@ -145,35 +191,16 @@ class Coroutine
      * @param type $socktype
      * @param type $protocol
      * @param type $service
+     * @param type $timeout
      * @return void
      */
-    public static function getaddrinfo( $hostname, $family, $socktype, $protocol, $service) { }
+    public static function getaddrinfo( $hostname, $family, $socktype, $protocol, $service, $timeout) { }
     
     /**
      * @param type $path
      * @return void
      */
     public static function statvfs( $path) { }
-    
-    /**
-     * @param type $cid
-     * @param type $options
-     * @param type $limit
-     * @return void
-     */
-    public static function getBackTrace( $cid, $options, $limit) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public static function list( ) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public static function listCoroutines( ) { }
     
 }
 

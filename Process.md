@@ -73,12 +73,13 @@ class Process
     
     
     /**
-     * @param type $callback
+     * @param callable $callback
      * @param type $redirect_stdin_and_stdout
      * @param type $pipe_type
+     * @param type $enable_coroutine
      * @return void
      */
-    public function __construct( $callback, $redirect_stdin_and_stdout, $pipe_type) { }
+    public function __construct( callable $callback, $redirect_stdin_and_stdout, $pipe_type, $enable_coroutine) { }
     
     /**
      * 
@@ -125,6 +126,12 @@ class Process
      * @return void
      */
     public static function setaffinity( array $cpu_settings) { }
+    
+    /**
+     * @param array $settings
+     * @return void
+     */
+    public function set( array $settings) { }
     
     /**
      * @param type $seconds
@@ -206,6 +213,12 @@ class Process
      * @return void
      */
     public function exec( $exec_file, $args) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public function exportSocket( ) { }
     
     /**
      * @param type $process_name

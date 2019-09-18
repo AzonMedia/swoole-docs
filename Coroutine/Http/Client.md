@@ -152,6 +152,13 @@ class Client
     public function setHeaders( array $headers) { }
     
     /**
+     * @param type $username
+     * @param type $password
+     * @return void
+     */
+    public function setBasicAuth( $username, $password) { }
+    
+    /**
      * @param array $cookies
      * @return void
      */
@@ -162,6 +169,26 @@ class Client
      * @return void
      */
     public function setData( $data) { }
+    
+    /**
+     * @param type $path
+     * @param type $name
+     * @param type $type
+     * @param type $filename
+     * @param type $offset
+     * @param type $length
+     * @return void
+     */
+    public function addFile( $path, $name, $type, $filename, $offset, $length) { }
+    
+    /**
+     * @param type $path
+     * @param type $name
+     * @param type $type
+     * @param type $filename
+     * @return void
+     */
+    public function addData( $path, $name, $type, $filename) { }
     
     /**
      * @param type $path
@@ -191,36 +218,34 @@ class Client
     public function download( $path, $file, $offset) { }
     
     /**
+     * 
+     * @return void
+     */
+    public function getBody( ) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public function getHeaders( ) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public function getCookies( ) { }
+    
+    /**
+     * 
+     * @return void
+     */
+    public function getStatusCode( ) { }
+    
+    /**
      * @param type $path
      * @return void
      */
     public function upgrade( $path) { }
-    
-    /**
-     * @param type $path
-     * @param type $name
-     * @param type $type
-     * @param type $filename
-     * @param type $offset
-     * @param type $length
-     * @return void
-     */
-    public function addFile( $path, $name, $type, $filename, $offset, $length) { }
-    
-    /**
-     * @param type $path
-     * @param type $name
-     * @param type $type
-     * @param type $filename
-     * @return void
-     */
-    public function addData( $path, $name, $type, $filename) { }
-    
-    /**
-     * @param type $timeout
-     * @return void
-     */
-    public function recv( $timeout) { }
     
     /**
      * @param type $data
@@ -229,6 +254,12 @@ class Client
      * @return void
      */
     public function push( $data, $opcode, $finish) { }
+    
+    /**
+     * @param type $timeout
+     * @return void
+     */
+    public function recv( $timeout) { }
     
     /**
      * 

@@ -15,6 +15,16 @@ namespace Swoole;
  */
 class ExitException extends \Swoole\Exception
 {
+    /**
+     * @var 
+     */
+    private $flags;
+    
+    /**
+     * @var 
+     */
+    private $status;
+    
     
     
     /**

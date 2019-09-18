@@ -18,6 +18,11 @@ class Statement
     /**
      * @var 
      */
+    public $id;
+    
+    /**
+     * @var 
+     */
     public $affected_rows;
     
     /**
@@ -45,28 +50,34 @@ class Statement
     public function execute( $params, $timeout) { }
     
     /**
-     * 
+     * @param type $timeout
      * @return void
      */
-    public function fetch( ) { }
+    public function fetch( $timeout) { }
+    
+    /**
+     * @param type $timeout
+     * @return void
+     */
+    public function fetchAll( $timeout) { }
+    
+    /**
+     * @param type $timeout
+     * @return void
+     */
+    public function nextResult( $timeout) { }
+    
+    /**
+     * @param type $timeout
+     * @return void
+     */
+    public function recv( $timeout) { }
     
     /**
      * 
      * @return void
      */
-    public function fetchAll( ) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public function nextResult( ) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public function __destruct( ) { }
+    public function close( ) { }
     
 }
 

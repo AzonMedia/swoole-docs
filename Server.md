@@ -165,10 +165,16 @@ class Server
     
     /**
      * @param type $event_name
-     * @param type $callback
+     * @param callable $callback
      * @return void
      */
-    public function on( $event_name, $callback) { }
+    public function on( $event_name, callable $callback) { }
+    
+    /**
+     * @param type $event_name
+     * @return void
+     */
+    public function getCallback( $event_name) { }
     
     /**
      * @param array $settings
@@ -262,10 +268,10 @@ class Server
     /**
      * @param type $data
      * @param type $worker_id
-     * @param type $finish_callback
+     * @param null|callable $finish_callback
      * @return void
      */
-    public function task( $data, $worker_id, $finish_callback) { }
+    public function task( $data, $worker_id, ?callable $finish_callback) { }
     
     /**
      * @param type $data
@@ -330,20 +336,6 @@ class Server
      * @param type $reactor_id
      * @return void
      */
-    public function connection_info( $fd, $reactor_id) { }
-    
-    /**
-     * @param type $start_fd
-     * @param type $find_count
-     * @return void
-     */
-    public function connection_list( $start_fd, $find_count) { }
-    
-    /**
-     * @param type $fd
-     * @param type $reactor_id
-     * @return void
-     */
     public function getClientInfo( $fd, $reactor_id) { }
     
     /**
@@ -354,31 +346,18 @@ class Server
     public function getClientList( $start_fd, $find_count) { }
     
     /**
-     * @param type $ms
-     * @param type $callback
-     * @param type $param
+     * @param type $fd
+     * @param type $reactor_id
      * @return void
      */
-    public function after( $ms, $callback, $param) { }
+    public function connection_info( $fd, $reactor_id) { }
     
     /**
-     * @param type $ms
-     * @param type $callback
+     * @param type $start_fd
+     * @param type $find_count
      * @return void
      */
-    public function tick( $ms, $callback) { }
-    
-    /**
-     * @param type $timer_id
-     * @return void
-     */
-    public function clearTimer( $timer_id) { }
-    
-    /**
-     * @param type $callback
-     * @return void
-     */
-    public function defer( $callback) { }
+    public function connection_list( $start_fd, $find_count) { }
     
     /**
      * @param type $message

@@ -80,11 +80,6 @@ class Client
      */
     private $onBufferEmpty;
     
-    /**
-     * @var 
-     */
-    private $onSSLReady;
-    
     
     /**
      * @var integer
@@ -217,24 +212,6 @@ class Client
     public function shutdown( $how) { }
     
     /**
-     * @param type $callback
-     * @return void
-     */
-    public function enableSSL( $callback) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public function getPeerCert( ) { }
-    
-    /**
-     * 
-     * @return void
-     */
-    public function verifyPeerCert( ) { }
-    
-    /**
      * 
      * @return void
      */
@@ -260,10 +237,10 @@ class Client
     
     /**
      * @param type $event_name
-     * @param type $callback
+     * @param callable $callback
      * @return void
      */
-    public function on( $event_name, $callback) { }
+    public function on( $event_name, callable $callback) { }
     
 }
 

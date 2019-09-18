@@ -1,5 +1,5 @@
-# ./classes/Swoole/Coroutine
+# Swoole\Coroutine\Socket
 
 ## Classes
-* [.\classes\Swoole\Coroutine\Socket\Exception](Exception.md)
+* [Swoole\Coroutine\Socket\Exception](Exception.md)
 
