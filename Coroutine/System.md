@@ -37,20 +37,20 @@ class System
      * @param type $get_error_stream
      * @return void
      */
-    public function exec( $command, $get_error_stream) { }
+    public static function exec( $command, $get_error_stream) { }
     
     /**
      * @param type $seconds
      * @return void
      */
-    public function sleep( $seconds) { }
+    public static function sleep( $seconds) { }
     
     /**
      * @param type $handle
      * @param type $length
      * @return void
      */
-    public function fread( $handle, $length) { }
+    public static function fread( $handle, $length) { }
     
     /**
      * @param type $handle
@@ -58,13 +58,13 @@ class System
      * @param type $length
      * @return void
      */
-    public function fwrite( $handle, $string, $length) { }
+    public static function fwrite( $handle, $string, $length) { }
     
     /**
      * @param type $handle
      * @return void
      */
-    public function fgets( $handle) { }
+    public static function fgets( $handle) { }
     
     /**
      * @param type $hostname
@@ -75,13 +75,13 @@ class System
      * @param type $timeout
      * @return void
      */
-    public function getaddrinfo( $hostname, $family, $socktype, $protocol, $service, $timeout) { }
+    public static function getaddrinfo( $hostname, $family, $socktype, $protocol, $service, $timeout) { }
     
     /**
      * @param type $filename
      * @return void
      */
-    public function readFile( $filename) { }
+    public static function readFile( $filename) { }
     
     /**
      * @param type $filename
@@ -89,13 +89,13 @@ class System
      * @param type $flags
      * @return void
      */
-    public function writeFile( $filename, $data, $flags) { }
+    public static function writeFile( $filename, $data, $flags) { }
     
     /**
      * @param type $path
      * @return void
      */
-    public function statvfs( $path) { }
+    public static function statvfs( $path) { }
     
 }
 

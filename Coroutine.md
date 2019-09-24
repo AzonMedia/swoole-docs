@@ -1,12 +1,27 @@
 # Swoole\Coroutine
 
-## Intrduction
+## Introduction
+
+Swoole provides [coroutines](https://en.wikipedia.org/wiki/Coroutine) - a lightway approach to threading.
+It is important to note that the coroutines in Swoole are not executing in parallel - they just do IO operations in parallel.
+A worker in Swoole executes only a single coroutine at any given time.
 
 ## Details
 
-#### Coroutine 
+All details in regards to the coroutine execution and specifics in Swoole along with many examples can be found [here](http://vesko.blogs.azonmedia.com/2019/09/19/coroutines-in-swoole/).
 
 ## Options
+
+The following options can be set by providing an associative array to the Coroutine::set() method:
+- max_coroutine
+- stack_size - the size of the preallocated stack for each coroutine. The default is 8kb.
+- log_level
+- trace_flags
+- socket_connect_timeout
+- socket_timeout
+- dns_cache_expire
+- dns_cache_capacity
+- enable_preemptive_scheduler
 
 ## API
 
@@ -43,7 +58,7 @@ class Coroutine
     public static function defer( $callback) { }
     
     /**
-     * Used to set vairous coroutine related settings 
+     * Used to set various coroutine related settings 
      * @param Array $options Associative array like  ['max_coroutine' => 4096]
      * @return void
      */
@@ -158,6 +173,8 @@ class Coroutine
     public static function disableScheduler( ) { }
     
     /**
+     * Deprecated. 
+     * Please use Swoole\Coroutine\System::gethostbyname() instead.
      * @param type $domain_name
      * @param type $family
      * @param type $timeout
@@ -166,6 +183,8 @@ class Coroutine
     public static function gethostbyname( $domain_name, $family, $timeout) { }
     
     /**
+     * Deprecated. 
+     * Please use Swoole\Coroutine\System::dnsLookup() instead.
      * @param type $domain_name
      * @param type $timeout
      * @return void
@@ -173,6 +192,8 @@ class Coroutine
     public static function dnsLookup( $domain_name, $timeout) { }
     
     /**
+     * Deprecated. 
+     * Please use Swoole\Coroutine\System::exec() instead.
      * @param type $command
      * @param type $get_error_stream
      * @return void
@@ -180,12 +201,16 @@ class Coroutine
     public static function exec( $command, $get_error_stream) { }
     
     /**
+     * Deprecated. 
+     * Please use Swoole\Coroutine\System::sleep() instead.
      * @param type $seconds
      * @return void
      */
     public static function sleep( $seconds) { }
     
     /**
+     * Deprecated. 
+     * Please use Swoole\Coroutine\System::fread() instead.
      * @param type $handle
      * @param type $length
      * @return void
@@ -193,12 +218,16 @@ class Coroutine
     public static function fread( $handle, $length) { }
     
     /**
+     * Deprecated. 
+     * Please use Swoole\Coroutine\System::fgets() instead.
      * @param type $handle
      * @return void
      */
     public static function fgets( $handle) { }
     
     /**
+     * Deprecated. 
+     * Please use Swoole\Coroutine\System::fwrite() instead.
      * @param type $handle
      * @param type $string
      * @param type $length
@@ -207,12 +236,16 @@ class Coroutine
     public static function fwrite( $handle, $string, $length) { }
     
     /**
+     * Deprecated. 
+     * Please use Swoole\Coroutine\System::readFile() instead.
      * @param type $filename
      * @return void
      */
     public static function readFile( $filename) { }
     
     /**
+     * Deprecated. 
+     * Please use Swoole\Coroutine\System::writeFile() instead.
      * @param type $filename
      * @param type $data
      * @param type $flags
@@ -221,6 +254,8 @@ class Coroutine
     public static function writeFile( $filename, $data, $flags) { }
     
     /**
+     * Deprecated.
+     * Please use Swoole\Coroutine\System::getaddrinfo() instead.
      * @param type $hostname
      * @param type $family
      * @param type $socktype
@@ -232,6 +267,8 @@ class Coroutine
     public static function getaddrinfo( $hostname, $family, $socktype, $protocol, $service, $timeout) { }
     
     /**
+     * Deprecated 
+     * Please use Swoole\Coroutine\System::statvfs() instead.
      * @param type $path
      * @return void
      */
@@ -244,3 +281,103 @@ class Coroutine
 
 ## Examples
 
+Executing coroutines in parallel to obtain data from external source by using channels:
+```php```
+<?php
+//we want to collect the results from the coroutines so we set the size of the channel to 2
+go(function(){
+    //the channel can be used only in coroutine context
+    //because of this a parent coroutine is needed
+    //if this is in the onRequest handler the code would already be in coroutine
+    $channel = new Swoole\Coroutine\Channel(2);
+    go(function() use ($channel) {
+        $mysql = new Swoole\Coroutine\MySQL();
+        $mysql->connect([
+            'host' => '127.0.0.1',
+            'user' => 'user',
+            'password' => 'pass',
+            'database' => 'testdb',
+        ]);
+        $data = $mysql->query('select * from menus');
+        $channel->push($data);
+    });
+ 
+    go(function() use ($channel) {
+        $mysql = new Swoole\Coroutine\MySQL();
+        $mysql->connect([
+            'host' => '127.0.0.1',
+            'user' => 'user',
+            'password' => 'pass',
+            'database' => 'testdb',
+        ]);
+        $data = $mysql->query('select * from orders');
+        $channel->push($data);
+    });
+ 
+    $data1 = $channel->pop();
+    $data2 = $channel->pop();
+ 
+    //there is no guarantee which result will come first!
+    //the returned data needs to be checked (by array keys) or flagged by the sub-coroutines to make sure what is what
+    print_r($data1);
+    print_r($data2);
+ 
+});
+```
+
+And an alternative way of doing the above task by using setDefer() and recv() methods on the MySQL client:
+```php
+<?php
+//for the same of completeness the code is given with server example instead of explicit master coroutine
+$Server = new Swoole\Http\Server('0.0.0.0', 8081, SWOOLE_PROCESS);
+$Server->on('request', function (\Swoole\Http\Request $SwooleRequest, \Swoole\Http\Response $SwooleResponse) {
+//go(function(){ //no need - we are in coroutine context already
+    $mysql1 = new Swoole\Coroutine\MySQL();
+    $mysql1->connect([
+        'host' => '127.0.0.1',
+        'user' => 'user',
+        'password' => 'pass',
+        'database' => 'testdb',
+    ]);
+    $mysql1->setDefer();
+    $mysql1->query('select * from menus');
+ 
+    $mysql2 = new Swoole\Coroutine\MySQL();
+    $mysql2->connect([
+        'host' => '127.0.0.1',
+        'user' => 'user',
+        'password' => 'pass',
+        'database' => 'testdb',
+    ]);
+    $mysql2->setDefer();
+    $mysql2->query('select * from orders');
+ 
+    $data1 = $mysql1->recv();
+    $data2 = $mysql2->recv();
+     
+    //in this case the order of the data is guaranteed - data1 holds the data from the first connection
+    print_r($data1);
+    print_r($data2);
+    $SwooleResponse->end('ok');
+//});
+});
+$Server->start();
+```
+
+Because of the persistent nature of swoole (memory/resources persist between the requests) it is very important to free any allocated resources during execution.
+This can be done with defer(). The execution of the deferred functions is in reverse order (as it should be for propres resource deallocation):
+```php
+<?php
+$ConnectionPool = new ConnectionPool();
+go(function() use ($ConnectionPool) {
+    $Connection = $ConnectionPool->get_connection();
+    Swoole\Coroutine::defer(function() use ($Connection) {
+        $Connection->free();//this is last
+    });
+    $Lock = $Connection->obtain_lock();
+    defer(function() use ($Lock) {
+        $Lock->release();//this is executed first
+    });
+    //function body
+});
+```

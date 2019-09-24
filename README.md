@@ -9,7 +9,7 @@ The given APIs are as they are defined in the Swoole extension.
 The given docblocks are when the actual types of the arguments should be and the expected return types.
 The docblocks also contain additional information about each method and deprecation notices wherever applicable.
 
-The documentation currently references Swoole 4.4.5.
+The documentation currently references Swoole 4.4.6.
 
 The sections that have documentation added are marked with an *. The rest of the sections contain just API reference.
 
@@ -17,6 +17,7 @@ The sections that have documentation added are marked with an *. The rest of the
 
 - [wiki.swoole.com](http://wiki.swoole.com)
 - [swoole.co.uk](http://swoole.co.uk)
+- [vesko.blogs.azonmedia.com](http://vesko.blogs.azonmedia.com)
 
 ## Namespaces
 * [Swoole\Atomic](Atomic)
