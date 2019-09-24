@@ -276,13 +276,12 @@ class Coroutine
     
 }
 
-
 ```
 
 ## Examples
 
 Executing coroutines in parallel to obtain data from external source by using channels:
-```php```
+```php
 <?php
 //we want to collect the results from the coroutines so we set the size of the channel to 2
 go(function(){
