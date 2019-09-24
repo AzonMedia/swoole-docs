@@ -40,7 +40,7 @@ The sections that have documentation added are marked with an *. The rest of the
 * [Swoole\Buffer](Buffer.md)
 * [Swoole\Client](Client.md)
 * [Swoole\Constant](Constant.md)
-* [Swoole\Coroutine](Coroutine.md)
+* [Swoole\Coroutine](Coroutine.md)*
 * [Swoole\Error](Error.md)
 * [Swoole\Event](Event.md)
 * [Swoole\Exception](Exception.md)
