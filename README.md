@@ -53,3 +53,7 @@ The sections that have documentation added are marked with an *. The rest of the
 * [Swoole\Table](Table.md)
 * [Swoole\Timer](Timer.md)
 
+## Functions
+
+* [Functions](Functions.md)
+
