@@ -37,7 +37,7 @@ The sections that have documentation added are marked with an *. The rest of the
 ## Classes
 * [Swoole\ArrayObject](ArrayObject.md)
 * [Swoole\Atomic](Atomic.md)
-* [Swoole\Buffer](Buffer.md)
+* [Swoole\Buffer](Buffer.md) [deprecated]
 * [Swoole\Client](Client.md)
 * [Swoole\Constant](Constant.md)
 * [Swoole\Coroutine](Coroutine.md)*
@@ -47,7 +47,7 @@ The sections that have documentation added are marked with an *. The rest of the
 * [Swoole\ExitException](ExitException.md)
 * [Swoole\Lock](Lock.md)
 * [Swoole\Process](Process.md)
-* [Swoole\Runtime](Runtime.md)
+* [Swoole\Runtime](Runtime.md) *
 * [Swoole\Server](Server.md)
 * [Swoole\StringObject](StringObject.md)
 * [Swoole\Table](Table.md)
