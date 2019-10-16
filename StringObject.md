@@ -23,28 +23,28 @@ class StringObject
     
     
     /**
-         * StringObject constructor.
-         * @param $string
-         */
+     * StringObject constructor.
+     * @param $string
+     */
     public function __construct( string $string = '') { }
     
     /**
-         * @return int
-         */
+     * @return int
+     */
     public function length( ) : int { }
     
     /**
-         * @param string $needle
-         * @param int $offset
-         * @return bool|int
-         */
+     * @param string $needle
+     * @param int $offset
+     * @return bool|int
+     */
     public function indexOf( string $needle, int $offset = 0) { }
     
     /**
-         * @param string $needle
-         * @param int $offset
-         * @return bool|int
-         */
+     * @param string $needle
+     * @param int $offset
+     * @return bool|int
+     */
     public function lastIndexOf( string $needle, int $offset = 0) { }
     
     /**

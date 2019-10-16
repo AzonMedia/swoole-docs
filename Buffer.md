@@ -2,6 +2,10 @@
 
 ## Intrduction
 
+Allows direct memory manipulation like in C.
+
+**This class will be deprecated.**
+
 ## API
 
 ```php
@@ -11,6 +15,7 @@ namespace Swoole;
 
 /**
  * Class Buffer
+ * Will be deprecated.
  * @package Swoole
  */
 class Buffer
