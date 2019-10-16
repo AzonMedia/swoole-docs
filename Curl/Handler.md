@@ -15,9 +15,15 @@ namespace Swoole\Curl;
  */
 class Handler
 {
+
+    private const ERRORS = [
+        CURLE_URL_MALFORMAT => 'No URL set!',
+    ];
+
+
     /**
-         * @var Client
-         */
+     * @var Client
+     */
     private $client;
     
     /**
@@ -59,6 +65,16 @@ class Handler
     );
     
     /**
+     * @var bool 
+     */
+    private $withHeaderOut = false;
+
+    /**
+     * @var bool
+     */
+    private $withFileTime = false;
+
+    /**
      * @var 
      */
     private $urlInfo;
@@ -79,14 +95,14 @@ class Handler
     private $proxy;
     
     /**
-     * @var 
+     * @var array
      */
-    private $clientOptions;
+    private $clientOptions = [];
     
     /**
-     * @var 
+     * @var bool
      */
-    private $followLocation;
+    private $followLocation = false;
     
     /**
      * @var 
@@ -94,26 +110,39 @@ class Handler
     private $maxRedirs;
     
     /**
-     * @var 
+     * @var bool
      */
-    private $withHeader;
+    private $withHeader = false;
+
+    /**
+     * @var bool
+     */
+    private $nobody = false;
     
-    /** @var callable */
+    /** 
+     * @var callable 
+     */
     private $headerFunction;
     
-    /** @var callable */
+    /** 
+     * @var callable 
+     */
     private $readFunction;
     
-    /** @var callable */
+    /** 
+     * @var callable 
+     */
     private $writeFunction;
     
-    /** @var callable */
+    /** 
+     * @var callable 
+     */
     private $progressFunction;
     
     /**
-     * @var 
+     * @var bool
      */
-    public $returnTransfer;
+    public $returnTransfer = false;
     
     /**
      * @var string
@@ -121,19 +150,19 @@ class Handler
     public $method = 'GET';
     
     /**
-     * @var 
+     * @var array
      */
-    public $headers;
+    public $headers = [];
     
     /**
-     * @var 
+     * @var int
      */
-    public $errCode;
+    public $errCode = 0;
     
     /**
-     * @var 
+     * @var string
      */
-    public $errMsg;
+    public $errMsg = '';
     
     
     /**

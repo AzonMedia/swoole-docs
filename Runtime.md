@@ -52,7 +52,7 @@ The list of supported constants is:
 - SWOOLE_HOOK_STREAM_SELECT - same like SWOOLE_HOOK_STREAM_FUNCTION
 - SWOOLE_HOOK_STREAM_FUNCTION - for \stream_select() function
 - SWOOLE_HOOK_BLOCKING_FUNCTION - for blocking system calls like \gethostbyname()
-- SWOOLE_HOOK_CURL - for curl operations
+- SWOOLE_HOOK_CURL - for curl operations (since Swoole 4.4.0)
 - SWOOLE_HOOK_PROC - program execution functions (\proc_open() etc)
 - SWOOLE_HOOK_ALL - all of the above
 
@@ -61,5 +61,6 @@ The list of supported constants is:
 Enable the coroutine hooks for sleep() and fread()
 
 ```php
+<?php
 Swoole\Runtime::enableCoroutine(TRUE, SWOOLE_HOOK_SLEEP | SWOOLE_HOOK_FILE);
 ```

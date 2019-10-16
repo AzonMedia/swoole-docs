@@ -2,6 +2,8 @@
 
 ## Introduction
 
+This class is part of the Swoole library written in pure PHP. The library is available since Swoole 4.4.0
+
 ## API
 
 #### Global Functions
@@ -267,15 +269,16 @@ function swoole_exec( string $command, &$output = NULL, &$returnVar = NULL) { }
 function swoole_shell_exec( string $cmd) { }
 
 /**
- * @param type $url
+ * Creates a new Swoole\Curl\Handler
+ * @param null|string $url
  * @return \Swoole\Curl\Handler
  */
 function swoole_curl_init( $url = NULL) : \Swoole\Curl\Handler { }
 
 /**
  * @param Swoole\Curl\Handler $obj
- * @param $opt
- * @param $value
+ * @param string $opt
+ * @param mixed $value
  * @return bool
  * @throws Swoole\Curl\Exception
  */
